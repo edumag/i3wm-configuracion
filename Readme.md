@@ -20,6 +20,9 @@ mv fontawesome-webfont.ttf $HOME/.fonts/
 # Añadimos configuración propia a dunst
 ln -s "$HOME/.config/i3/dunst" "$HOME/.config"
 
+# Control de volumen
+sudo apt-get install pasystray lxappareance pavucontrol
+
 
 
 ```
@@ -73,10 +76,10 @@ ventanas.
 
 ## pasystray (Volumen)
 
-`sudo apt-get install pasystray lxappareance`
-
 Al lanzar pasystray el icono oscuro no se ve bien.
 Lanzamos lxappareance para cambiar el tema gtk y los iconos.
+
+![Rofi3](/home/edumag/.config/i3/img/i3wm-06.png)
 
 ## Configuración de touchpad.
 

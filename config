@@ -105,7 +105,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # exit i3
-bindsym $mod+Shift+e exec /home/edumag/.config/i3/i3exit.sh logout
+bindsym $mod+Shift+e exec $HOME/.config/i3/i3exit.sh logout
 
 
 # resize window (you can also use the mouse for that)
@@ -142,7 +142,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 
 # bar
 bar {
-  	status_command i3blocks -c /home/edumag/.config/i3/i3blocks.conf
+  	status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
 	colors {
 		background $bg-color
 	    	separator #757575
@@ -196,23 +196,14 @@ bindsym $mod+c exec rofi -show calc -modi "calc:qalc +u8 -nocurrencies"
 # Utilizamos rofi para que nos muestre toda las ventanas abiertas.
 bindsym $mod+Tab exec rofi -show window
 
-# startup
-exec_always --no-startup-id feh --bg-scale /home/edumag/.wallpaper.jpg
-# exec_always --no-startup-id xrandr --output HDMI-0 --off --output DVI-I-1 --off --output DVI-I-0 --off --output DVI-I-3 --mode 1920x1080 --pos 0x0 --rotate normal --output DVI-I-2 --mode 1920x1080 --pos 1920x0 --rotate normal
-# exec --no-startup-id spotify
-# exec --no-startup-id skype
+# Wallpaper https://salmorejogeek.com/2016/04/12/te-traigo-el-wallpaper-linuxero-de-moda-un-pinguino-un-sistema-y-un-destino/
+exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/wallpaper.jpg
 
-# Keys
-# exec_always xmodmap -e "clear lock" #disable caps lock switch
-# exec_always xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
-
+# Transparencias.
 exec --no-startup-id compton -f
 
 # Red
 exec --no-startup-id nm-applet
-
-# Applet de volumen
-#exec --no-startup-id volumeicon
 
 # Notificaciones.
 exec --no-startup-id dunst
@@ -222,6 +213,6 @@ exec --no-startup-id pasystray -a
 
 # my i3 config is at ~/.config/i3/config
 # increase screen brightness with notification
-bindsym XF86MonBrightnessUp exec notify-send "`/home/edumag/.config/i3/brightness.sh +`"
+bindsym XF86MonBrightnessUp exec notify-send "`$HOME/.config/i3/brightness.sh +`"
 # decrease screen brightness with notification
-bindsym XF86MonBrightnessDown exec notify-send "`/home/edumag/.config/i3/brightness.sh -`"
+bindsym XF86MonBrightnessDown exec notify-send "`$HOME/.config/i3/brightness.sh -`"
