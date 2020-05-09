@@ -1,20 +1,75 @@
 # Personalización i3wm
 
-![](/home/edumag/.config/i3/img/Screenshot-01.png)
+![I3Wm](/home/edumag/.config/i3/img/Screenshot-01.png)
 
 ## Instalación
 
 ```
-sudo apt-get install i3 dunst compton
+# Instalamos dependencias.
+sudo apt-get install i3 dunst compton tilix
+
+# Bajamos configuración.
+git clone git@gitlab.com:edumag/i3-configuraci-n.git
+mv i3-configuraci-n.git $HOME/.config/i3
+
+# Instalamos font awesome.
+wget https://github.com/creationix/boxcode/raw/master/font/fontawesome-webfont.ttf
+[[ -d "$HOME/.fonts" ]] || mkdir $HOME/.fonts
+mv fontawesome-webfont.ttf $HOME/.fonts/
+
+# Añadimos configuración propia a dunst
+ln -s "$HOME/.config/i3/dunst" "$HOME/.config"
+
+
 
 ```
 
 
-## Extras
+
+## Combinación de teclas básica
+
+| Combinación      | Acción                                      |
+| ---------------- | ------------------------------------------- |
+| Mod+Enter        | Terminal                                    |
+| Mod+Shift+Q      | Cerrar centana                              |
+| Mod+d            | Lanzador aplicaciones                       |
+| Mod+Shift+Space  | Cambiar ventana a modo flotante             |
+| Mod+r            | Redimensionar ventana                       |
+| Mod+Alt_L        | Seleccionar ventana                         |
+| Mod+Shift+Flecha | Mover ventana de posición                   |
+| Mod+w            | Cambio de disposición de ventanas (Layouts) |
+| Mod+Flecha       | Cambiamos foco de ventana                   |
+
+
 
 ## font-awesome
-## rofi y rofi calc
+
+[Font Awesome Free's Cheatsheet](https://fontawesome.com/cheatsheet?from=io)
+
+Desde la web de fontawesome podemos copiar y pegar los iconos en nuestros
+ficheros de configuración
+
+## Rofi
+
+Instalamos rofi como lanzador de aplicación
+y de paso tenemos calculadora y selector de
+ventanas.
+
+### Menú de aplicaciones (Mod+d)
+
+![Rofi1](/home/edumag/.config/i3/img/i3wm-02.png)
+
+### Calculadora (Mod+c)
+
+![Rofi2](/home/edumag/.config/i3/img/i3wm-03.png)
+
+### Seleccionar ventana. (Mod+Tab_L)
+
+![Rofi3](/home/edumag/.config/i3/img/i3wm-04.png)
+
 ## dunst (Notificaciones)
+
+![Rofi3](/home/edumag/.config/i3/img/i3wm-05.png)
 
 ## pasystray (Volumen)
 

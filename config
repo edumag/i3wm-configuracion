@@ -186,6 +186,7 @@ bindsym $mod+Return exec tilix
 # Mostrar tilix en modo quake.
 bindsym $mod+Alt_L exec tilix --quake
 bindsym $mod+Shift+q kill
+# Añado spectacle para capturar pantalla por ser el que tengo instalado.
 bindsym Print exec spectacle
 # bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 18"
 # Menú de aplicaciones.
@@ -217,7 +218,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id dunst
 
 # Volumen.
-exec --no-startup-id pasystray
+exec --no-startup-id pasystray -a
 
 # my i3 config is at ~/.config/i3/config
 # increase screen brightness with notification
