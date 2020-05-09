@@ -1,6 +1,6 @@
 # Personalización i3wm
 
-![I3Wm](/home/edumag/.config/i3/img/Screenshot-01.png)
+![I3Wm](./img/Screenshot-01.png)
 
 ## Instalación
 
@@ -58,26 +58,26 @@ ventanas.
 
 ### Menú de aplicaciones (Mod+d)
 
-![Rofi1](/home/edumag/.config/i3/img/i3wm-02.png)
+![Rofi1](./img/i3wm-02.png)
 
 ### Calculadora (Mod+c)
 
-![Rofi2](/home/edumag/.config/i3/img/i3wm-03.png)
+![Rofi2](./img/i3wm-03.png)
 
 ### Seleccionar ventana. (Mod+Tab_L)
 
-![Rofi3](/home/edumag/.config/i3/img/i3wm-04.png)
+![Rofi3](./img/i3wm-04.png)
 
 ## dunst (Notificaciones)
 
-![Rofi3](/home/edumag/.config/i3/img/i3wm-05.png)
+![Rofi3](./img/i3wm-05.png)
 
 ## pasystray (Volumen)
 
 Al lanzar pasystray el icono oscuro no se ve bien.
 Lanzamos lxappareance para cambiar el tema gtk y los iconos.
 
-![Rofi3](/home/edumag/.config/i3/img/i3wm-06.png)
+![Rofi3](./img/i3wm-06.png)
 
 ## Configuración de touchpad.
 
