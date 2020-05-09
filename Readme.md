@@ -4,14 +4,11 @@
 
 ## Instalación
 
-`sudo apt-get install i3 dunst`
-
-## Configuración
+```
+sudo apt-get install i3 dunst compton
 
 ```
-[[ -d $HOME/.config/i3 ]] || mkdir $HOME/.config/i3
-cp config $HOME/.config/i3/
-```
+
 
 ## Extras
 
@@ -21,7 +18,7 @@ cp config $HOME/.config/i3/
 
 ## pasystray (Volumen)
 
-`sudo apt-get install pasystray`
+`sudo apt-get install pasystray lxappareance`
 
 Al lanzar pasystray el icono oscuro no se ve bien.
 Lanzamos lxappareance para cambiar el tema gtk y los iconos.
@@ -42,7 +39,8 @@ EOF
 ### Referencias
 
 - https://cravencode.com/post/essentials/enable-tap-to-click-in-i3wm/
+
+## Referencias
+
 - [Una buena explicación de como funciona](https://github.com/bookercodes/dotfiles.git)
 
-
-xrandr --output LVDS-1 --brightness 1
