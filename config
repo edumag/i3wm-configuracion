@@ -218,5 +218,5 @@ bindsym XF86MonBrightnessUp exec notify-send "`$HOME/.config/i3/brightness.sh +`
 bindsym XF86MonBrightnessDown exec notify-send "`$HOME/.config/i3/brightness.sh -`"
 
 # Autostart.
-exec --no-startup-id bash ~/.config/i3/autostart.sh
+exec --no-startup-id $HOME/.config/i3/autostart.sh
 
