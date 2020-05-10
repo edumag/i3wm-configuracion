@@ -217,6 +217,6 @@ bindsym XF86MonBrightnessUp exec notify-send "`$HOME/.config/i3/brightness.sh +`
 # decrease screen brightness with notification
 bindsym XF86MonBrightnessDown exec notify-send "`$HOME/.config/i3/brightness.sh -`"
 
-# Gestor de contraseñas
-exec --no-startup-id export SSH_ASKPASS=/usr/bin/ksshaskpass ; /usr/bin/ssh-add $HOME/.ssh/id_rsa </dev/null
+# Autostart.
+exec --no-startup-id bash ~/.config/i3/autostart.sh
 
