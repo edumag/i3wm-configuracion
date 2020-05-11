@@ -142,6 +142,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 
 # bar
 bar {
+    position top
   	status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
 	colors {
 		background $bg-color
@@ -188,9 +189,9 @@ bindsym $mod+Alt_L exec tilix --quake
 bindsym $mod+Shift+q kill
 # Añado spectacle para capturar pantalla por ser el que tengo instalado.
 bindsym Print exec spectacle
-# bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 18"
+# bindsym $mod+d exec rofi -show drun -lines 3 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 18"
 # Menú de aplicaciones.
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show drun
 # Calculadora con rofi.
 bindsym $mod+c exec rofi -show calc -modi "calc:qalc +u8 -nocurrencies"
 # Utilizamos rofi para que nos muestre toda las ventanas abiertas.
