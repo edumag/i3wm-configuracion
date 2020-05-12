@@ -7,7 +7,7 @@ done
 
 if [ -d $HOME/.config/autostart-scripts ] ; then
     cd $HOME/.config/autostart-scripts
-    for c in "*" ; do
+    for c in "./*" ; do
         $c
     done
     cd -
