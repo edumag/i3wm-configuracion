@@ -58,10 +58,10 @@ bindsym $mod+f fullscreen
 bindsym $mod+w layout toggle
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+shift+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -128,9 +128,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 set $bg-color 	         #2f343f
-set $inactive-bg-color   #2f343f
-set $text-color          #f3f4f5
-set $inactive-text-color #676E7D
+set $inactive-bg-color   #414858
+set $text-color          #ffffff
+set $inactive-text-color #98a1b3
 set $urgent-bg-color     #E53935
 
 # window colors

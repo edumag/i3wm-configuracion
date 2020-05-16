@@ -36,7 +36,7 @@ sudo apt-get install pasystray lxappareance pavucontrol
 | Mod+Enter        | Terminal                                    |
 | Mod+Shift+Q      | Cerrar centana                              |
 | Mod+d            | Lanzador aplicaciones                       |
-| Mod+Shift+Space  | Cambiar ventana a modo flotante             |
+| Mod+Space        | Cambiar ventana a modo flotante             |
 | Mod+r            | Redimensionar ventana                       |
 | Mod+Alt_L        | Seleccionar ventana con Rofi                |
 | Mod+Shift+Flecha | Mover ventana de posición                   |
