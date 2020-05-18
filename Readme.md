@@ -6,7 +6,7 @@
 
 ```bash
 # Instalamos dependencias.
-sudo apt-get install i3 dunst compton tilix feh rofi
+sudo apt-get install i3 dunst compton tilix feh rofi system-config-printer
 
 # Bajamos configuración.
 git clone git@gitlab.com:edumag/i3-configuraci-n.git
@@ -43,6 +43,8 @@ sudo apt-get install pasystray lxappareance pavucontrol
 | Mod+w            | Cambio de disposición de ventanas (Layouts) |
 | Mod+Flecha       | Cambiamos foco de ventana                   |
 | Mod+f            | FullScreen                                  |
+| Mod+p            | Gestión de impresoras                       |
+
 ## font-awesome
 
 [Font Awesome Free's Cheatsheet](https://fontawesome.com/cheatsheet?from=io)
