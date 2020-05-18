@@ -104,6 +104,19 @@ No he podido encontrar ninguna aplicación que me funcione, al final he realizad
 >
 > uso: brightness.sh [+|-]
 
+En mi caso:
+
+Añadir "acpi_backlight=vendor" a la linea 
+
+```
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+```
+
+en /etc/default/grub y ejecutamos 
+
+`sudo update-grub2.`
+
+
 ## Referencias
 
 - [Una buena explicación de como funciona](https://github.com/bookercodes/dotfiles.git)
