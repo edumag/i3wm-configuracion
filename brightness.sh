@@ -17,7 +17,8 @@ fi
 xrandr --output LVDS-1 --brightness $NUEVO
 
 if [ $? == 0 ] ; then
-    echo "Brightness: $NUEVO" 
+    killall dunst
+    notify-send  "Brightness: $NUEVO" 
     exit
 fi
 
