@@ -6,7 +6,7 @@
 
 ```bash
 # Instalamos dependencias.
-sudo apt-get install i3 dunst compton tilix feh rofi system-config-printer
+sudo apt-get install i3 dunst compton tilix feh rofi system-config-printer gdebi-core
 
 # Bajamos configuración.
 git clone git@gitlab.com:edumag/i3-configuraci-n.git
@@ -26,8 +26,6 @@ ln -s "$HOME/.config/i3/dunst" "$HOME/.config"
 # Control de volumen
 sudo apt-get install pasystray lxappareance pavucontrol
 ```
-
-
 
 ## Combinación de teclas básica
 
@@ -100,6 +98,14 @@ EOF
 
 ## Control de brillo
 
+### Instalar light
+
+Bajar paquete deb de https://github.com/haikarainen/light/releases e instalar.
+
+```
+sudo apt install gdebi-core light_*.deb
+```
+
 No he podido encontrar ninguna aplicación que me funcione, al final he realizado un simple script que hace la función.
 
 > $ ./brightness.sh -h
@@ -118,6 +124,11 @@ en /etc/default/grub y ejecutamos
 
 `sudo update-grub2.`
 
+Permitimos ejecutar script sin pedir contraseña desde sudo:
+
+```
+echo "$USER   ALL=(root) NOPASSWD: $HOME/.config/i3/brightness.sh" | sudo tee /etc/sudoers.d/brightness
+```
 
 ## Referencias
 

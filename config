@@ -219,9 +219,9 @@ exec --no-startup-id pasystray -a
 
 # my i3 config is at ~/.config/i3/config
 # increase screen brightness with notification
-bindsym XF86MonBrightnessUp exec $HOME/.config/i3/brightness.sh +
+bindsym XF86MonBrightnessUp exec sudo $HOME/.config/i3/brightness.sh +
 # decrease screen brightness with notification
-bindsym XF86MonBrightnessDown exec $HOME/.config/i3/brightness.sh -
+bindsym XF86MonBrightnessDown exec sudo $HOME/.config/i3/brightness.sh -
 
 # Autostart.
 exec --no-startup-id $HOME/.config/i3/autostart.sh

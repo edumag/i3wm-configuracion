@@ -1,6 +1,7 @@
 #!/bin/bash
 
-ACTUAL=`xrandr --current --verbose | grep Brightness | cut -d' ' -f2`
+# ACTUAL=`xrandr --current --verbose | grep Brightness | cut -d' ' -f2`
+ACTUAL=`sudo cat /sys/class/backlight/intel_backlight/brightness`
 
 if [ -z $1 ] ; then
     echo
@@ -9,12 +10,14 @@ if [ -z $1 ] ; then
 fi
 
 if [ "$1" == "+" ] ; then
-    NUEVO=`echo $ACTUAL + 0.1 | bc`
+    NUEVO=`echo $ACTUAL + 10 | bc`
 else
-    NUEVO=`echo $ACTUAL - 0.1 | bc`
+    NUEVO=`echo $ACTUAL - 10 | bc`
 fi
 
-xrandr --output LVDS-1 --brightness $NUEVO
+#xrandr --output LVDS-1 --brightness $NUEVO
+echo $NUEVO | sudo tee /sys/class/backlight/intel_backlight/brightness
+
 
 if [ $? == 0 ] ; then
     killall dunst
