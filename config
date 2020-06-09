@@ -226,3 +226,6 @@ bindsym XF86MonBrightnessDown exec sudo $HOME/.config/i3/brightness.sh -
 # Autostart.
 exec --no-startup-id $HOME/.config/i3/autostart.sh
 
+# Quitar títulos de ventana.
+for_window [class="^.*"] border pixel 1
+
