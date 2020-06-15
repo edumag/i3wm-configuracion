@@ -168,6 +168,8 @@ for_window [class="System-config-printer.py"] floating enable
 # default workspaces
 assign [class="Spotify"] $workspace5
 assign [class="Skype"] $workspace9
+assign [class="Firefox"] $workspace1 
+assign [class="Thunderbird"] $workspace2
 
 # # workspace default monitors
 # workspace $workspace1 output DVI-I-2
