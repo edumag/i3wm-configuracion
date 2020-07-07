@@ -96,6 +96,37 @@ EOF
 
 - https://cravencode.com/post/essentials/enable-tap-to-click-in-i3wm/
 
+## Configuración de gtk-3
+
+He tenido problemas con algunos textos de los botones que no se muestran en las aplicaciones gnome que utilizan gtk3.
+
+Para solucionarlo he creado el fichero .config/gtk-3.0/settings.ini y añadido:
+
+```
+[Settings]
+gtk-icon-theme-name = Adwaita
+gtk-theme-name = Adwaita
+gtk-font-name = DejaVu Sans 11
+gtk-theme-name=Arc-Dark
+gtk-icon-theme-name=breeze-dark
+gtk-font-name=Sans 11
+gtk-cursor-theme-name=Breeze_Amber
+gtk-cursor-theme-size=0
+gtk-toolbar-style=GTK_TOOLBAR_BOTH_HORIZ
+gtk-toolbar-icon-size=GTK_ICON_SIZE_SMALL_TOOLBAR
+gtk-button-images=0
+gtk-menu-images=0
+gtk-enable-event-sounds=0
+gtk-enable-input-feedback-sounds=0
+gtk-xft-antialias=1
+gtk-xft-hinting=1
+gtk-xft-hintstyle=hintslight
+gtk-xft-rgba=rgb
+# gtk-decoration-layout=menu:close
+# gtk-application-prefer-dark-theme=1
+
+```
+
 ## Control de brillo
 
 ### Instalar light
