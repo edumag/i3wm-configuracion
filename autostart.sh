@@ -12,3 +12,4 @@ if [ -d $HOME/.config/autostart-scripts ] ; then
     done
     cd -
 fi
+

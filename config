@@ -232,3 +232,6 @@ exec --no-startup-id $HOME/.config/i3/autostart.sh
 # Quitar títulos de ventana.
 for_window [class="^.*"] border pixel 2
 
+# Monitores
+# Monitor externo a la izquierda.
+exec --no-startup-id xrandr --output VGA-1 --auto --left-of LVDS-1
