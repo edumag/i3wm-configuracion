@@ -71,10 +71,10 @@ set $workspace2 ""
 set $workspace3 ""
 set $workspace4 ""
 set $workspace5 ""
-set $workspace6 ""
-set $workspace7 ""
-set $workspace8 ""
-set $workspace9 ""
+set $workspace6 "6"
+set $workspace7 "7"
+set $workspace8 "8"
+set $workspace9 "9"
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
@@ -206,7 +206,7 @@ bindsym $mod+Tab exec rofi -show window
 bindsym $mod+p exec system-config-printer
 
 # Wallpaper https://salmorejogeek.com/2016/04/12/te-traigo-el-wallpaper-linuxero-de-moda-un-pinguino-un-sistema-y-un-destino/
-exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/wallpaper.jpg
+exec_always --no-startup-id feh --bg-scale $HOME/wallpaper.jpg
 
 # Transparencias.
 exec --no-startup-id compton -f
