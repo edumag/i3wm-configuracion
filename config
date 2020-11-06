@@ -6,7 +6,7 @@ font pango: System San Francisco Display 10
 # font pango:monospace 8
 
 # thin borders
-hide_edge_borders both
+hide_edge_borders none
 
 # drag windows
 floating_modifier $mod
@@ -127,31 +127,31 @@ mode "resize" {
 # resize mode
 bindsym $mod+r mode "resize"
 
-set $active              #5265b2
-set $bg-color 	         #2f343f
-set $inactive-bg-color   #414858
-set $text-color          #ffffff
-set $inactive-text-color #98a1b3
-set $urgent-bg-color     #E53935
+set $active_bg   #dbe117
+set $active      #000000
+set $bg_color 	 #2f343f
+set $inactive_bg #414858
+set $text-color  #ffffff
+set $inactive    #ffffff
+set $urgent_bg   #E53935
 
-# window colors
-#                       border              background         text                 indicator
-client.focused          $active             $active            $active              $active
-client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+#                       border       background   text        indicator
+client.focused          $active_bg   $active_bg   #000000     #000000
+client.unfocused        $inactive_bg $inactive_bg $inactive   #00ff00
+client.focused_inactive $inactive_bg $inactive_bg $inactive   #00ff00
+client.urgent           $urgent_bg   $urgent_bg   $text-color #00ff00
 
 # bar
 bar {
     position top
   	status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
 	colors {
-		background $bg-color
+		background $bg_color
 	    	separator #757575
 		#                  border             background         text
-		focused_workspace  $bg-color          $bg-color          $text-color
-		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+		focused_workspace  $bg_color          $bg_color          $text-color
+		inactive_workspace $inactive_bg $inactive_bg $inactive-text-color
+		urgent_workspace   $urgent_bg   $urgent_bg   $text-color
 	}
 }
 
@@ -195,7 +195,7 @@ bindsym $mod+Alt_L exec tilix --quake
 bindsym $mod+Shift+q kill
 # Añado spectacle para capturar pantalla por ser el que tengo instalado.
 bindsym Print exec spectacle
-# bindsym $mod+d exec rofi -show drun -lines 3 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 18"
+# bindsym $mod+d exec rofi -show drun -lines 3 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -bc "$bg_color" -bg "$bg_color" -fg "$text-color" -hlbg "$bg_color" -hlfg "#9575cd" -font "System San Francisco Display 18"
 # Menú de aplicaciones.
 bindsym $mod+d exec rofi -show drun
 # Calculadora con rofi.
@@ -230,7 +230,7 @@ bindsym XF86MonBrightnessDown exec sudo $HOME/.config/i3/brightness.sh -
 exec --no-startup-id $HOME/.config/i3/autostart.sh
 
 # Quitar títulos de ventana.
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 3
 
 # Monitores
 # Monitor externo a la izquierda.
