@@ -3,7 +3,7 @@ set $mod Mod4
 
 # font
 # font pango: System San Francisco Display 10
-font pango:monospace 6
+font pango:monospace 8
 
 # thin borders
 hide_edge_borders none
@@ -230,9 +230,7 @@ bindsym XF86MonBrightnessDown exec sudo $HOME/.config/i3/brightness.sh -
 exec --no-startup-id $HOME/.config/i3/autostart.sh
 
 # Decoración ventana.
-for_window [class="^.*"] border pixel 3
-# font pango:lemon 8   
-# for_window [class=".*"] title_format "<span font='Tewi 8'></span>"
+for_window [class="^.*"] border pixel 1
 
 # Monitores
 # Monitor externo a la izquierda.
