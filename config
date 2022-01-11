@@ -238,4 +238,7 @@ for_window [class="^.*"] border pixel 2
 # Monitor externo a la izquierda.
 exec --no-startup-id xrandr --output VGA-1 --auto --left-of LVDS-1
 
-
+# Extras
+bindsym $mod+Ctrl+e exec "tilix -e ssh -t lesolivex 'cd emccxt ; ./emma'"
+bindsym $mod+Ctrl+w exec "tilix -e ssh -t lesolivex 'cd emccxt-simulate ; ./emma'"
+bindsym $mod+Ctrl+l exec brave-browser --new-window https://es.tradingview.com/chart
