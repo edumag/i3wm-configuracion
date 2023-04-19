@@ -66,11 +66,11 @@ bindsym $mod+shift+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-set $workspace1 ""
-set $workspace2 ""
-set $workspace3 ""
-set $workspace4 ""
-set $workspace5 ""
+set $workspace1 "1"
+set $workspace2 "2"
+set $workspace3 "3"
+set $workspace4 "4"
+set $workspace5 "5"
 set $workspace6 "6"
 set $workspace7 "7"
 set $workspace8 "8"
@@ -239,6 +239,7 @@ for_window [class="^.*"] border pixel 2
 exec --no-startup-id xrandr --output VGA-1 --auto --left-of LVDS-1
 
 # Extras
-bindsym $mod+Ctrl+e exec "tilix -e ssh -t lesolivex 'cd emccxt ; ./emma'"
-bindsym $mod+Ctrl+w exec "tilix -e ssh -t lesolivex 'cd emccxt-simulate ; ./emma'"
+bindsym $mod+Ctrl+e exec "tilix -e ssh -t lesolivex 'cd emma ; ./scripts/emma'"
+bindsym $mod+Ctrl+w exec "tilix -e ssh -t lesolivex 'cd emma-simula ; ./scripts/emma simula'"
 bindsym $mod+Ctrl+l exec brave-browser --new-window https://es.tradingview.com/chart
+bindsym $mod+Ctrl+b exec brave-browser --new-window
