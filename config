@@ -189,7 +189,7 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-bindsym $mod+Return exec tilix
+bindsym $mod+Return exec terminator
 # Mostrar tilix en modo quake.
 bindsym $mod+Alt_L exec tilix --quake
 bindsym $mod+Shift+q kill
@@ -239,7 +239,7 @@ for_window [class="^.*"] border pixel 2
 exec --no-startup-id xrandr --output VGA-1 --auto --left-of LVDS-1
 
 # Extras
-bindsym $mod+Ctrl+e exec "tilix -e ssh -t lesolivex 'cd emma ; ./scripts/emma'"
-bindsym $mod+Ctrl+w exec "tilix -e ssh -t lesolivex 'cd emma-simula ; ./scripts/emma simula'"
+bindsym $mod+Ctrl+e exec "terminator -e ssh -t lesolivex 'cd emma ; ./scripts/emma'"
+bindsym $mod+Ctrl+w exec "terminator -e ssh -t lesolivex 'cd emma-simula ; ./scripts/emma simula'"
 bindsym $mod+Ctrl+l exec brave-browser --new-window https://es.tradingview.com/chart
 bindsym $mod+Ctrl+b exec brave-browser --new-window
