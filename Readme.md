@@ -161,6 +161,12 @@ Permitimos ejecutar script sin pedir contraseña desde sudo:
 echo "$USER   ALL=(root) NOPASSWD: $HOME/.config/i3/brightness.sh" | sudo tee /etc/sudoers.d/brightness
 ```
 
+## Aplicaciones por defecto.
+
+```
+vim .config/mimeapps.list 
+```
+
 ## Referencias
 
 - [Una buena explicación de como funciona](https://github.com/bookercodes/dotfiles.git)
