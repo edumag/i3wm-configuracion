@@ -16,7 +16,7 @@ bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-            
+
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -169,7 +169,7 @@ for_window [class="System-config-printer.py"] floating enable
 # default workspaces
 # assign [class="Spotify"] $workspace5
 # assign [class="Skype"] $workspace9
-# assign [class="Firefox"] $workspace1 
+# assign [class="Firefox"] $workspace1
 # assign [class="Thunderbird"] $workspace2
 
 # # workspace default monitors
@@ -242,4 +242,4 @@ exec --no-startup-id xrandr --output VGA-1 --auto --left-of LVDS-1
 bindsym $mod+Ctrl+e exec "terminator -e ssh -t lesolivex 'cd emma ; ./scripts/emma'"
 bindsym $mod+Ctrl+w exec "terminator -e ssh -t lesolivex 'cd emma-simula ; ./scripts/emma simula'"
 bindsym $mod+Ctrl+l exec brave-browser --new-window https://es.tradingview.com/chart
-bindsym $mod+Ctrl+b exec brave-browser --new-window
+bindsym $mod+Ctrl+b exec brave-browser --new-window https://google.com
