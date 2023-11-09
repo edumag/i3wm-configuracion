@@ -98,6 +98,17 @@ bindsym $mod+7 workspace $workspace7
 bindsym $mod+8 workspace $workspace8
 bindsym $mod+9 workspace $workspace9
 
+# workspace to screen
+workspace $workspace1 output LVDS1
+workspace $workspace2 output VGA1
+workspace $workspace3 output LVDS1
+workspace $workspace4 output VGA1
+workspace $workspace5 output LVDS1
+workspace $workspace6 output VGA1
+workspace $workspace7 output LVDS1
+workspace $workspace8 output VGA1
+workspace $workspace9 output LVDS1
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
@@ -165,6 +176,7 @@ bindsym $mod+Shift+s sticky toggle
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Skype"] floating enable
 for_window [class="System-config-printer.py"] floating enable
+for_window [class="Slack"] floating enable
 
 # default workspaces
 # assign [class="Spotify"] $workspace5
@@ -206,6 +218,8 @@ bindsym $mod+c exec rofi -show calc -modi "calc:qalc +u8 -nocurrencies"
 bindsym $mod+Tab exec rofi -show window
 # Gestión de impresoras.
 bindsym $mod+p exec system-config-printer
+# Ruta de fichero copiada a vim-remote.
+bindsym Ctrl+Shift+q exec file2vim
 
 # Wallpaper https://salmorejogeek.com/2016/04/12/te-traigo-el-wallpaper-linuxero-de-moda-un-pinguino-un-sistema-y-un-destino/
 exec_always --no-startup-id feh --bg-scale $HOME/wallpaper.jpg
@@ -236,7 +250,9 @@ for_window [class="^.*"] border pixel 2
 
 # Monitores
 # Monitor externo a la izquierda.
-exec --no-startup-id xrandr --output VGA-1 --auto --left-of LVDS-1
+# exec --no-startup-id xrandr --output VGA-1 --auto --left-of LVDS-1
+# Monitor externo arriba.
+exec --no-startup-id xrandr --output LVDS-1 --primary --mode 1366x768 --pos 117x900 --rotate normal --output VGA-1 --mode 1600x900 --pos 0x0 --rotate normal --output HDMI-1 --off --output DP-1 --off --output HDMI-2 --off --output HDMI-3 --off --output DP-2 --off --output DP-3 --off
 
 # Extras
 bindsym $mod+Ctrl+e exec "terminator -e ssh -t lesolivex 'cd emma ; ./scripts/emma'"
