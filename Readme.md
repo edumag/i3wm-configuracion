@@ -180,3 +180,8 @@ sudo add-apt-repository -y ppa:regolith-linux/stable
 sudo apt install i3-gaps
 ```
 
+## Reemplazar i3-gaps por i3-radius
+
+https://terminalroot.com/how-to-install-i3-gaps-with-rounded-corners/
+
+

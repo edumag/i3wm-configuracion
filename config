@@ -152,7 +152,7 @@ mode "resize" {
 # resize mode
 bindsym $mod+r mode "resize"
 
-set $active_bg   #dbe117
+set $active_bg   #3C152D
 set $active      #000000
 set $bg_color 	 #2f343f
 set $inactive_bg #414858
@@ -216,14 +216,17 @@ bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+Return exec terminator
-# Mostrar tilix en modo quake.
-bindsym $mod+Alt_L exec tilix --quake
+
+# Matar aplicación.
 bindsym $mod+Shift+q kill
+
 # Añado spectacle para capturar pantalla por ser el que tengo instalado.
 # bindsym Print exec spectacle
 bindsym Print exec ksnip -a
 bindsym Shift+Print exec ksnip -sm
+
 # bindsym $mod+d exec rofi -show drun -lines 3 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -bc "$bg_color" -bg "$bg_color" -fg "$text-color" -hlbg "$bg_color" -hlfg "#9575cd" -font "System San Francisco Display 18"
+
 # Menú de aplicaciones.
 bindsym $mod+d exec rofi -show drun
 # Calculadora con rofi.
@@ -266,7 +269,8 @@ for_window [class="^.*"] border pixel 2
 # Monitor externo a la izquierda.
 # exec --no-startup-id xrandr --output VGA-1 --auto --left-of LVDS-1
 # Monitor externo arriba.
-exec --no-startup-id xrandr --output LVDS-1 --primary --mode 1366x768 --pos 117x900 --rotate normal --output VGA-1 --mode 1600x900 --pos 0x0 --rotate normal --output HDMI-1 --off --output DP-1 --off --output HDMI-2 --off --output HDMI-3 --off --output DP-2 --off --output DP-3 --off
+# exec --no-startup-id xrandr --output LVDS-1 --primary --mode 1366x768 --pos 117x900 --rotate normal --output VGA-1 --mode 1600x900 --pos 0x0 --rotate normal --output HDMI-1 --off --output DP-1 --off --output HDMI-2 --off --output HDMI-3 --off --output DP-2 --off --output DP-3 --off
+exec --no-startup-id xrandr --output LVDS-1 --primary --mode 1366x768 --pos 100x900 --rotate normal --output VGA-1 --mode 1600x900 --pos 0x0
 
 # Extras
 bindsym $mod+Ctrl+e exec "terminator -e ssh -t lesolivex 'cd emma ; ./scripts/emma'"
@@ -278,16 +282,19 @@ bindsym $mod+Ctrl+b exec brave-browser --new-window https://google.com
 # You can also use any non-zero value if you'd like to have a border
 default_border pixel 0
 
-# gaps inner all set 20
-# gaps outer current plus 5
-# gaps horizontal current plus 40
-# gaps outer current toggle 60
-
-gaps inner 3
-gaps outer -2
-
 # Only enable gaps on a workspace when there is at least one container
 smart_gaps on
 
 # Only enable outer gaps when there is exactly one container
 smart_gaps inverse_outer
+
+##### i3-gaps ##############
+for_window [class=".*"] border pixel 1 #*
+gaps inner 4
+gaps outer 1
+#gaps horizontal 2
+
+################# i3-radius #######################
+smart_borders on
+smart_borders no_gaps
+border_radius 12
