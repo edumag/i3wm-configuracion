@@ -273,3 +273,21 @@ bindsym $mod+Ctrl+e exec "terminator -e ssh -t lesolivex 'cd emma ; ./scripts/em
 bindsym $mod+Ctrl+w exec "terminator -e ssh -t lesolivex 'cd emma-simula ; ./scripts/emma simula'"
 bindsym $mod+Ctrl+l exec brave-browser --new-window https://es.tradingview.com/chart
 bindsym $mod+Ctrl+b exec brave-browser --new-window https://google.com
+
+# i3gaps
+# You can also use any non-zero value if you'd like to have a border
+default_border pixel 0
+
+# gaps inner all set 20
+# gaps outer current plus 5
+# gaps horizontal current plus 40
+# gaps outer current toggle 60
+
+gaps inner 3
+gaps outer -2
+
+# Only enable gaps on a workspace when there is at least one container
+smart_gaps on
+
+# Only enable outer gaps when there is exactly one container
+smart_gaps inverse_outer

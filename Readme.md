@@ -145,13 +145,13 @@ No he podido encontrar ninguna aplicación que me funcione, al final he realizad
 
 En mi caso:
 
-Añadir "acpi_backlight=vendor" a la linea 
+Añadir "acpi_backlight=vendor" a la linea
 
 ```
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
 ```
 
-en /etc/default/grub y ejecutamos 
+en /etc/default/grub y ejecutamos
 
 `sudo update-grub2.`
 
@@ -164,7 +164,7 @@ echo "$USER   ALL=(root) NOPASSWD: $HOME/.config/i3/brightness.sh" | sudo tee /e
 ## Aplicaciones por defecto.
 
 ```
-vim .config/mimeapps.list 
+vim .config/mimeapps.list
 ```
 
 ## Referencias
@@ -173,4 +173,10 @@ vim .config/mimeapps.list
 - https://sergioquijanorey.github.io/i3/linux/programacion/administracion/2018/09/09/configuraci%C3%B3n-i3wm.html
 
 
+## Reemplazar i3-wm por i3-gaps
+
+```
+sudo add-apt-repository -y ppa:regolith-linux/stable
+sudo apt install i3-gaps
+```
 
