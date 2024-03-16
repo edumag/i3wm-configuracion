@@ -152,10 +152,10 @@ mode "resize" {
 # resize mode
 bindsym $mod+r mode "resize"
 
-set $active_bg   #3C152D
+set $active_bg   #eeeeee
 set $active      #000000
 set $bg_color 	 #2f343f
-set $inactive_bg #414858
+set $inactive_bg #000000
 set $text-color  #ffffff
 set $inactive    #ffffff
 set $urgent_bg   #E53935
@@ -242,10 +242,12 @@ bindsym Ctrl+Shift+q exec file2vim
 exec_always --no-startup-id feh --bg-scale $HOME/wallpaper.jpg
 
 # Transparencias.
-exec --no-startup-id compton -f
+exec --no-startup-id picom --config .config/picom/picom.conf
+
 
 # Red
 exec --no-startup-id nm-applet
+# exec --no-startup-id nm-tray
 
 # Notificaciones.
 exec --no-startup-id dunst
@@ -276,8 +278,8 @@ for_window [class="^.*"] border pixel 2
 # Extras
 bindsym $mod+Ctrl+e exec "terminator -e ssh -t lesolivex 'cd emma ; ./scripts/emma'"
 bindsym $mod+Ctrl+w exec "terminator -e ssh -t lesolivex 'cd emma-simula ; ./scripts/emma simula'"
-bindsym $mod+Ctrl+l exec brave-browser --new-window https://es.tradingview.com/chart
-bindsym $mod+Ctrl+b exec brave-browser --new-window https://google.com
+bindsym $mod+Ctrl+b exec brave --new-window https://google.com
+# xdg-open http://google.com
 
 # i3gaps
 # You can also use any non-zero value if you'd like to have a border
@@ -296,6 +298,6 @@ gaps outer 1
 #gaps horizontal 2
 
 ################# i3-radius #######################
-smart_borders on
-smart_borders no_gaps
-border_radius 12
+# smart_borders on
+# smart_borders no_gaps
+# border_radius 12
