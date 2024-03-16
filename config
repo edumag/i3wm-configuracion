@@ -264,6 +264,9 @@ bindsym XF86MonBrightnessDown exec sudo $HOME/.config/i3/brightness.sh -
 # Autostart.
 exec --no-startup-id $HOME/.config/i3/autostart.sh
 
+# Gestión de claves.
+exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
+
 # Decoración ventana.
 for_window [class="^.*"] border pixel 2
 
