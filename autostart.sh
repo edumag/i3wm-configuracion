@@ -6,7 +6,7 @@ egrep -rh '^Exec' $HOME/.config/autostart | while read -r line ; do
 done
 
 if [ -d $HOME/.config/i3/autostart ] ; then
-    cd $HOME/.config/autostart-scripts
+    cd $HOME/.config/i3/autostart
     for launch in * ; do
       # echo "$launch"
       ./$launch &
