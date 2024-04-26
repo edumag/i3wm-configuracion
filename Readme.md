@@ -7,10 +7,10 @@
 ```bash
 # Instalamos dependencias.
 # debian o derivadas.
-sudo apt-get install i3 dunst compton tilix feh rofi system-config-printer gdebi-core network-manager-gnome xrand keychain
+sudo apt-get install i3 dunst compton terminator feh rofi system-config-printer gdebi-core network-manager-gnome xrand keychain
 
 # arch o derivadas
-sudo pacman -S i3 i3-gaps dunst tilix feh rofi xrand network-manager-applet keychain
+sudo pacman -S i3 i3-gaps dunst terminator feh rofi xrand network-manager-applet keychain
 
 # Bajamos configuración.
 git clone git@gitlab.com:edumag/i3-configuraci-n.git
