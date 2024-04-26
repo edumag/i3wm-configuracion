@@ -31,6 +31,26 @@ ln -s "$HOME/.config/i3/dunst" "$HOME/.config"
 sudo apt-get install pasystray pavucontrol
 ```
 
+### En caso de tener problemas con los bloques de i3bar
+
+Los instalamos manualmente.
+
+```
+cd ~
+git clone https://github.com/vivien/i3blocks-contrib.git
+make install
+rm -fr i3blocks-contrib
+```
+
+Los bloques se instalaran en ~/.local/libexec/i3blocks/
+
+Reconfiguramos i3blocks en ~/.config/i3/i3blocks.conf
+
+```
+# command=/usr/share/i3blocks/$BLOCK_NAME
+command=~/.local/libexec/i3blocks/$BLOCK_NAME
+```
+
 ## Editar gtk
 
 ```
@@ -65,6 +85,10 @@ ficheros de configuración
 Instalamos rofi como lanzador de aplicación
 y de paso tenemos calculadora y selector de
 ventanas.
+
+### Seleccionar tema.
+
+rofi-theme-selector
 
 ### Menú de aplicaciones (Mod+d)
 
