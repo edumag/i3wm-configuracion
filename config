@@ -239,7 +239,7 @@ bindsym $mod+p exec system-config-printer
 bindsym Ctrl+Shift+q exec file2vim
 
 # Wallpaper https://salmorejogeek.com/2016/04/12/te-traigo-el-wallpaper-linuxero-de-moda-un-pinguino-un-sistema-y-un-destino/
-exec_always --no-startup-id feh --bg-scale $HOME/wallpaper.jpg
+exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/wallpaper.jpg
 
 # Transparencias.
 exec --no-startup-id picom --config .config/picom/picom.conf
