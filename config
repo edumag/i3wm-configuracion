@@ -268,7 +268,8 @@ exec --no-startup-id $HOME/.config/i3/autostart.sh
 for_window [class="^.*"] border pixel 2
 
 # Monitor externo arriba.
-exec xrandr --output LVDS-1  --mode 1366x768 --pos 110x900 --output VGA-1 --primary --mode 1600x900 --pos 0x0
+# exec xrandr --output LVDS-1  --mode 1366x768 --pos 110x900 --output VGA-1 --primary --mode 1600x900 --pos 0x0
+exec $HOME/.config/i3/xrand.sh
 
 # Extras
 bindsym $mod+Ctrl+e exec "terminator -e ssh -t lesolivex 'cd emma ; ./scripts/emma'"

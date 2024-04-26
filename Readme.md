@@ -6,7 +6,11 @@
 
 ```bash
 # Instalamos dependencias.
-sudo apt-get install i3 dunst compton tilix feh rofi system-config-printer gdebi-core network-manager-gnome
+# debian o derivadas.
+sudo apt-get install i3 dunst compton tilix feh rofi system-config-printer gdebi-core network-manager-gnome xrand keychain
+
+# arch o derivadas
+sudo pacman -S i3 i3-gaps dunst tilix feh rofi xrand network-manager-applet keychain
 
 # Bajamos configuración.
 git clone git@gitlab.com:edumag/i3-configuraci-n.git
@@ -24,7 +28,13 @@ wget https://github.com/supermarin/YosemiteSanFranciscoFont/blob/master/System%2
 ln -s "$HOME/.config/i3/dunst" "$HOME/.config"
 
 # Control de volumen
-sudo apt-get install pasystray lxappearance pavucontrol
+sudo apt-get install pasystray pavucontrol
+```
+
+## Editar gtk
+
+```
+lxappearance
 ```
 
 ## Combinación de teclas básica
