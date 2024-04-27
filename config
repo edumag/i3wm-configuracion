@@ -238,6 +238,10 @@ bindsym $mod+p exec system-config-printer
 # Ruta de fichero copiada a vim-remote.
 bindsym Ctrl+Shift+q exec file2vim
 
+# Menú scripts propios.
+bindsym $mod+m exec --no-startup-id ~/.config/i3/launch_custom_scripts.sh
+
+
 # Wallpaper https://salmorejogeek.com/2016/04/12/te-traigo-el-wallpaper-linuxero-de-moda-un-pinguino-un-sistema-y-un-destino/
 exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/wallpaper.jpg
 
@@ -271,7 +275,7 @@ for_window [class="^.*"] border pixel 2
 
 # Monitor externo arriba.
 # exec xrandr --output LVDS-1  --mode 1366x768 --pos 110x900 --output VGA-1 --primary --mode 1600x900 --pos 0x0
-exec --no-startup-id $HOME/.config/i3/xrand.sh
+exec --no-startup-id $HOME/.config/i3/custom_scripts/1-Monitor
 
 # Extras
 bindsym $mod+Ctrl+e exec "terminator -e ssh -t lesolivex 'cd emma ; ./scripts/emma'"
