@@ -263,9 +263,11 @@ exec --no-startup-id pasystray -a -S /usr/share/icons/oxygen/base/22x22/status/a
 
 # my i3 config is at ~/.config/i3/config
 # increase screen brightness with notification
-bindsym XF86MonBrightnessUp exec $HOME/.config/i3/brightness.sh +
+bindsym XF86MonBrightnessUp exec $HOME/.config/i3/brightness.sh + 1
+bindsym Shift+XF86MonBrightnessUp exec $HOME/.config/i3/brightness.sh + 2
 # decrease screen brightness with notification
-bindsym XF86MonBrightnessDown exec $HOME/.config/i3/brightness.sh -
+bindsym XF86MonBrightnessDown exec $HOME/.config/i3/brightness.sh - 1
+bindsym Shift+XF86MonBrightnessDown exec $HOME/.config/i3/brightness.sh - 2
 
 # Autostart.
 exec --no-startup-id $HOME/.config/i3/autostart.sh

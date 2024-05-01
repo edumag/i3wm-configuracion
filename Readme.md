@@ -4,38 +4,42 @@
 
 ## Instalación
 
-```bash
-# Instalamos dependencias.
-# debian o derivadas.
-sudo apt-get install i3 dunst compton terminator feh rofi system-config-printer gdebi-core network-manager-gnome xrand keychain clipit
+### debian o derivadas.
 
-# arch o derivadas
-sudo pacman -S i3 i3-gaps dunst terminator feh rofi xrand network-manager-applet keychain clipit
+    sudo apt-get install i3 dunst compton terminator feh rofi system-config-printer gdebi-core network-manager-gnome xrand keychain clipit
 
-# Bajamos configuración.
-git clone git@gitlab.com:edumag/i3-configuraci-n.git
-mv i3-configuraci-n.git $HOME/.config/i3
+### arch o derivadas
 
-# Instalamos font awesome.
-wget https://github.com/creationix/boxcode/raw/master/font/fontawesome-webfont.ttf
-[[ -d "$HOME/.fonts" ]] || mkdir $HOME/.fonts
-mv fontawesome-webfont.ttf $HOME/.fonts/
+    sudo pacman -S i3 i3-gaps dunst terminator feh rofi xrand network-manager-applet keychain clipit
 
-# Fuente System San Francisco
-wget https://github.com/supermarin/YosemiteSanFranciscoFont/blob/master/System%20San%20Francisco%20Display%20Regular.ttf?raw=true -o "$HOME/.fonts/System San Francisco Display Regular.ttf"
+### Bajamos configuración.
 
-# Añadimos configuración propia a dunst
-ln -s "$HOME/.config/i3/dunst" "$HOME/.config"
+    git clone git@gitlab.com:edumag/i3-configuraci-n.git
+    mv i3-configuraci-n.git $HOME/.config/i3
 
-# Control de volumen
-sudo apt-get install pasystray pavucontrol
-```
+### Instalamos font awesome.
 
-## Servidor de notificaciones
+    wget https://github.com/creationix/boxcode/raw/master/font/fontawesome-webfont.ttf
+    [[ -d "$HOME/.fonts" ]] || mkdir $HOME/.fonts
+    mv fontawesome-webfont.ttf $HOME/.fonts/
+
+### Fuente System San Francisco
+
+    wget https://github.com/supermarin/YosemiteSanFranciscoFont/blob/master/System%20San%20Francisco%20Display%20Regular.ttf?raw=true -o "$HOME/.fonts/System San Francisco Display Regular.ttf"
+
+### Añadimos configuración propia a dunst
+
+    ln -s "$HOME/.config/i3/dunst" "$HOME/.config"
+
+### Control de volumen
+
+    sudo apt-get install pasystray pavucontrol
+
+### Servidor de notificaciones
 
     sudo pacman -S notification-daemon
 
-### Configurar DBUS
+#### Configurar DBUS
 
     cd /usr/share/dbus-1/services/
     sudo vim org.freedesktop.Notifications.service
