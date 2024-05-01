@@ -6,11 +6,11 @@
 
 ### debian o derivadas.
 
-    sudo apt-get install i3 dunst compton terminator feh rofi system-config-printer gdebi-core network-manager-gnome xrand keychain clipit
+    sudo apt-get install i3 dunst compton terminator feh rofi system-config-printer gdebi-core network-manager-gnome xrand keychain clipit pasystray
 
 ### arch o derivadas
 
-    sudo pacman -S i3 i3-gaps dunst terminator feh rofi xrand network-manager-applet keychain clipit sysstat
+    sudo pacman -S i3 i3-gaps dunst terminator feh rofi xrand network-manager-applet keychain clipit sysstat pasystray
 
 ### Bajamos configuración.
 
@@ -27,10 +27,6 @@
 
     wget https://github.com/supermarin/YosemiteSanFranciscoFont/blob/master/System%20San%20Francisco%20Display%20Regular.ttf?raw=true -o "$HOME/.fonts/System San Francisco Display Regular.ttf"
 
-### Control de volumen
-
-    sudo apt-get install pasystray
-
 ### Servidor de notificaciones
 
 En caso de tener un servidor ya activado deberá sustituirse.
@@ -46,31 +42,6 @@ Se ejecuta el servidor desde /usr/share/dbus-1/services/org.freedesktop.Notifica
 #### Añadimos configuración propia a dunst
 
     ln -s "$HOME/.config/i3/dunst" "$HOME/.config"
-
-#### Configurar DBUS
-
-    cd /usr/share/dbus-1/services/
-    sudo vim org.freedesktop.Notifications.service
-
-### En caso de tener problemas con los bloques de i3bar
-
-Los instalamos manualmente.
-
-```
-cd ~
-git clone https://github.com/vivien/i3blocks-contrib.git
-make install
-rm -fr i3blocks-contrib
-```
-
-Los bloques se instalaran en ~/.local/libexec/i3blocks/
-
-Reconfiguramos i3blocks en ~/.config/i3/i3blocks.conf
-
-```
-# command=/usr/share/i3blocks/$BLOCK_NAME
-command=~/.local/libexec/i3blocks/$BLOCK_NAME
-```
 
 ## Editar gtk
 
@@ -123,94 +94,15 @@ rofi-theme-selector
 
 ![Rofi3](./img/i3wm-04.png)
 
-## pasystray (Volumen)
-
-Al lanzar pasystray el icono oscuro no se ve bien.
-Lanzamos lxappareance para cambiar el tema gtk y los iconos.
-
-![Rofi3](./img/i3wm-06.png)
-
-## Configuración de touchpad.
-
-```
-sudo mkdir -p /etc/X11/xorg.conf.d && sudo tee <<'EOF' /etc/X11/xorg.conf.d/90-touchpad.conf 1> /dev/null
-Section "InputClass"
-        Identifier "touchpad"
-        MatchIsTouchpad "on"
-        Driver "libinput"
-        Option "Tapping" "on"
-EndSection
-
-EOF
-```
 ### Referencias
 
 - https://cravencode.com/post/essentials/enable-tap-to-click-in-i3wm/
 
-## Configuración de gtk-3
-
-He tenido problemas con algunos textos de los botones que no se muestran en las aplicaciones gnome que utilizan gtk3.
-
-Para solucionarlo he creado el fichero .config/gtk-3.0/settings.ini y añadido:
-
-```
-[Settings]
-gtk-icon-theme-name = Adwaita
-gtk-theme-name = Adwaita
-gtk-font-name = DejaVu Sans 11
-gtk-theme-name=Arc-Dark
-gtk-icon-theme-name=breeze-dark
-gtk-font-name=Sans 11
-gtk-cursor-theme-name=Breeze_Amber
-gtk-cursor-theme-size=0
-gtk-toolbar-style=GTK_TOOLBAR_BOTH_HORIZ
-gtk-toolbar-icon-size=GTK_ICON_SIZE_SMALL_TOOLBAR
-gtk-button-images=0
-gtk-menu-images=0
-gtk-enable-event-sounds=0
-gtk-enable-input-feedback-sounds=0
-gtk-xft-antialias=1
-gtk-xft-hinting=1
-gtk-xft-hintstyle=hintslight
-gtk-xft-rgba=rgb
-# gtk-decoration-layout=menu:close
-# gtk-application-prefer-dark-theme=1
-
-```
-
 ## Control de brillo
 
-### Instalar light
+Utilizamos script propio para el control de brillo con xrand.
 
-Bajar paquete deb de https://github.com/haikarainen/light/releases e instalar.
-
-```
-sudo apt install gdebi-core light_*.deb
-```
-
-No he podido encontrar ninguna aplicación que me funcione, al final he realizado un simple script que hace la función.
-
-> $ ./brightness.sh -h
->
-> uso: brightness.sh [+|-]
-
-En mi caso:
-
-Añadir "acpi_backlight=vendor" a la linea
-
-```
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
-```
-
-en /etc/default/grub y ejecutamos
-
-`sudo update-grub2.`
-
-Permitimos ejecutar script sin pedir contraseña desde sudo:
-
-```
-echo "$USER   ALL=(root) NOPASSWD: $HOME/.config/i3/brightness.sh" | sudo tee /etc/sudoers.d/brightness
-```
+Configuramos tecla de brillo + shift para segunda pantalla.
 
 ## Aplicaciones por defecto.
 
