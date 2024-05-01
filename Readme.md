@@ -27,28 +27,30 @@
 
     wget https://github.com/supermarin/YosemiteSanFranciscoFont/blob/master/System%20San%20Francisco%20Display%20Regular.ttf?raw=true -o "$HOME/.fonts/System San Francisco Display Regular.ttf"
 
-### Añadimos configuración propia a dunst
-
-    ln -s "$HOME/.config/i3/dunst" "$HOME/.config"
-
 ### Control de volumen
 
-    sudo apt-get install pasystray pavucontrol
+    sudo apt-get install pasystray
 
 ### Servidor de notificaciones
 
-    sudo pacman -S notification-daemon
+En caso de tener un servidor ya activado deberá sustituirse.
+
+Se ejecuta el servidor desde /usr/share/dbus-1/services/org.freedesktop.Notifications.service
+
+    [D-BUS Service]
+    Name=org.freedesktop.Notifications
+    Exec=/usr/bin/dunst
+    SystemdService=dunst.service
+    exec --no-startup-id dunst
+
+#### Añadimos configuración propia a dunst
+
+    ln -s "$HOME/.config/i3/dunst" "$HOME/.config"
 
 #### Configurar DBUS
 
     cd /usr/share/dbus-1/services/
     sudo vim org.freedesktop.Notifications.service
-
-Contenido org.freedesktop.Notifications.service
-
-    [D-BUS Service]
-    Name=org.freedesktop.Notifications
-    Exec=/usr/lib/notification-daemon-1.0/notification-daemon
 
 ### En caso de tener problemas con los bloques de i3bar
 

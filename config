@@ -1,5 +1,6 @@
 # mod
 set $mod Mod4
+set $browser brave
 
 # font
 # font pango: System San Francisco Display 10
@@ -255,7 +256,14 @@ exec --no-startup-id nm-applet
 # exec --no-startup-id nm-tray
 
 # Notificaciones.
-exec --no-startup-id dunst
+# Se ejecuta el servidor desde /usr/share/dbus-1/services/org.freedesktop.Notifications.service
+# [D-BUS Service]
+# Name=org.freedesktop.Notifications
+# Exec=/usr/bin/dunst
+# SystemdService=dunst.service
+# exec --no-startup-id dunst
+# Mostar historial.
+bindsym Ctrl+space exec dunstctl history-pop
 
 # Volumen.
 exec --no-startup-id pasystray -a -S /usr/share/icons/oxygen/base/22x22/status/audio-volume-high.png
@@ -282,7 +290,7 @@ exec --no-startup-id $HOME/.config/i3/custom_scripts/1-Monitor
 # Extras
 bindsym $mod+Ctrl+e exec "terminator -e ssh -t lesolivex 'cd emma ; ./scripts/emma'"
 bindsym $mod+Ctrl+w exec "terminator -e ssh -t lesolivex 'cd emma-simula ; ./scripts/emma simula'"
-bindsym $mod+Ctrl+b exec brave --new-window https://google.com
+bindsym $mod+Ctrl+b exec $browser --new-window https://google.com
 # xdg-open http://google.com
 
 # i3gaps
