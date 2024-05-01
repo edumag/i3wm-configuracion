@@ -115,16 +115,3 @@ vim .config/mimeapps.list
 - [Una buena explicación de como funciona](https://github.com/bookercodes/dotfiles.git)
 - https://sergioquijanorey.github.io/i3/linux/programacion/administracion/2018/09/09/configuraci%C3%B3n-i3wm.html
 
-
-## Reemplazar i3-wm por i3-gaps
-
-```
-sudo add-apt-repository -y ppa:regolith-linux/stable
-sudo apt install i3-gaps
-```
-
-## Reemplazar i3-gaps por i3-radius
-
-https://terminalroot.com/how-to-install-i3-gaps-with-rounded-corners/
-
-
