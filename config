@@ -4,7 +4,7 @@ set $browser brave
 
 # font
 # font pango: System San Francisco Display 10
-font pango:monospace 10
+font pango:monospace 8
 
 # thin borders
 hide_edge_borders none
@@ -170,7 +170,7 @@ client.urgent           $urgent_bg   $urgent_bg   $text-color #00ff00
 
 # bar
 bar {
-  font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont 12
+  font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont 10
   position top
     status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
     colors {
