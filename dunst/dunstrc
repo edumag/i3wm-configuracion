@@ -23,7 +23,10 @@
 
     icon_position = left
     max_icon_size = 32
-    icon_path = "/usr/share/icons/gnome/24x24/status/:/usr/share/icons/gnome/24x24/devices/:/usr/share/icons/gnome/24x24/apps/:/usr/share/icons/Faenza/apps/32/:/usr/share/icons/hicolor/24x24/apps/:/usr/share/icons/Arc/apps/24/:/usr/share/icons/hicolor/32x32/apps/"
+    icon_path = "/usr/share/icons/Adwaita/:/usr/share/icons/breeze/"
+
+    icon_theme = breeze
+    enable_recursive_icon_lookup = true
 
     # Sort messages by urgency
     sort = yes
@@ -103,7 +106,7 @@
     separator_height = 2
 
     # padding between text and separator
-    padding = 8
+    padding = 28
 
     # horizontal padding
     horizontal_padding = 8
