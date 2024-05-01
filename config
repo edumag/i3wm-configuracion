@@ -159,6 +159,7 @@ set $inactive_bg #000000
 set $text-color  #ffffff
 set $inactive    #ffffff
 set $urgent_bg   #E53935
+set $bg_color_bar 	 #2f343f
 
 #                       border       background   text        indicator
 client.focused          $active_bg   $active_bg   $active     $active
@@ -168,16 +169,17 @@ client.urgent           $urgent_bg   $urgent_bg   $text-color #00ff00
 
 # bar
 bar {
-    position top
-  	status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
-	colors {
-		background $bg_color
-	    	separator #757575
-		#                  border             background         text
-		focused_workspace  $bg_color          $bg_color          $text-color
-		inactive_workspace $inactive_bg $inactive_bg $inactive-text-color
-		urgent_workspace   $urgent_bg   $urgent_bg   $text-color
-	}
+  font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont 12
+  position top
+    status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
+    colors {
+      background $bg_color_bar
+        separator #757575
+        # border             background         text
+        focused_workspace  $bg_color          $bg_color          $text-color
+        inactive_workspace $inactive_bg $inactive_bg $inactive-text-color
+        urgent_workspace   $urgent_bg   $urgent_bg   $text-color
+    }
 }
 
 
@@ -248,9 +250,6 @@ exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/wallpaper.jpg
 # Transparencias.
 exec --no-startup-id picom --config .config/picom/picom.conf
 
-# Portapapeleexec --no-startup-ids
-exec --no-startup-id clipit
-
 # Red
 exec --no-startup-id nm-applet
 # exec --no-startup-id nm-tray
@@ -259,13 +258,14 @@ exec --no-startup-id nm-applet
 exec --no-startup-id dunst
 
 # Volumen.
-exec --no-startup-id pasystray -a
+exec --no-startup-id pasystray -a -S /usr/share/icons/oxygen/base/22x22/status/audio-volume-high.png
+
 
 # my i3 config is at ~/.config/i3/config
 # increase screen brightness with notification
-bindsym XF86MonBrightnessUp exec sudo $HOME/.config/i3/brightness.sh +
+bindsym XF86MonBrightnessUp exec $HOME/.config/i3/brightness.sh +
 # decrease screen brightness with notification
-bindsym XF86MonBrightnessDown exec sudo $HOME/.config/i3/brightness.sh -
+bindsym XF86MonBrightnessDown exec $HOME/.config/i3/brightness.sh -
 
 # Autostart.
 exec --no-startup-id $HOME/.config/i3/autostart.sh
