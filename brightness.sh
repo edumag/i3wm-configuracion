@@ -32,7 +32,7 @@ echo "Brightness: $NUEVO"
 
 if [ $? == 0 ] ; then
     # killall dunst
-    # notify-send  "Brightness: $NUEVO"
+    notify-send  "Brightness: $NUEVO"
     exit
 fi
 

@@ -31,6 +31,21 @@ ln -s "$HOME/.config/i3/dunst" "$HOME/.config"
 sudo apt-get install pasystray pavucontrol
 ```
 
+## Servidor de notificaciones
+
+    sudo pacman -S notification-daemon
+
+### Configurar DBUS
+
+    cd /usr/share/dbus-1/services/
+    sudo vim org.freedesktop.Notifications.service
+
+Contenido org.freedesktop.Notifications.service
+
+    [D-BUS Service]
+    Name=org.freedesktop.Notifications
+    Exec=/usr/lib/notification-daemon-1.0/notification-daemon
+
 ### En caso de tener problemas con los bloques de i3bar
 
 Los instalamos manualmente.
@@ -101,10 +116,6 @@ rofi-theme-selector
 ### Seleccionar ventana. (Mod+Tab_L)
 
 ![Rofi3](./img/i3wm-04.png)
-
-## dunst (Notificaciones)
-
-![Rofi3](./img/i3wm-05.png)
 
 ## pasystray (Volumen)
 
