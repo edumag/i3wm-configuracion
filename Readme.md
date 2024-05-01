@@ -10,7 +10,7 @@
 
 ### arch o derivadas
 
-    sudo pacman -S i3 i3-gaps dunst terminator feh rofi xrand network-manager-applet keychain clipit
+    sudo pacman -S i3 i3-gaps dunst terminator feh rofi xrand network-manager-applet keychain clipit sysstat
 
 ### Bajamos configuración.
 
