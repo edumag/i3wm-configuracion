@@ -196,6 +196,11 @@
     appname = "transmission"
     new_icon = transmission
 
+[skip-display]
+    # This notification will not be displayed, but will be included in the history
+    summary = "Network Error"
+    skip_display = yes
+
 #[espeak]
 #    summary = "*"
 #    script = dunst_espeak.sh
