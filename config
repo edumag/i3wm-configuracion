@@ -213,8 +213,8 @@ for_window [class="Slack"] floating enable
 # key-bindings
 # Listar dispositivos de audio.
 # pactl list sinks |& grep -A 2 -E "Sink"
-bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-volume 0 +5% ; pactl set-sink-volume 1 +5% ; pactl set-sink-volume 105 +5%"
-bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-volume 0 -5% ; pactl set-sink-volume 1 -5% ; pactl set-sink-volume 105 -5%"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "~/.config/i3/volume_all.sh +"
+bindsym XF86AudioLowerVolume exec --no-startup-id "~/.config/i3/volume_all.sh -"
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl play-pause
