@@ -114,15 +114,15 @@ bindsym $mod+8 workspace $workspace8
 bindsym $mod+9 workspace $workspace9
 
 # workspace to screen
-workspace $workspace1 output LVDS1
-workspace $workspace2 output VGA1
-workspace $workspace3 output LVDS1
-workspace $workspace4 output VGA1
-workspace $workspace5 output LVDS1
-workspace $workspace6 output VGA1
-workspace $workspace7 output LVDS1
-workspace $workspace8 output VGA1
-workspace $workspace9 output LVDS1
+# workspace $workspace1 output LVDS1
+# workspace $workspace2 output VGA1
+# workspace $workspace3 output LVDS1
+# workspace $workspace4 output VGA1
+# workspace $workspace5 output LVDS1
+# workspace $workspace6 output VGA1
+# workspace $workspace7 output LVDS1
+# workspace $workspace8 output VGA1
+# workspace $workspace9 output LVDS1
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
