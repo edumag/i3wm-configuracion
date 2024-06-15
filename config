@@ -259,6 +259,9 @@ exec --no-startup-id picom --config $HOME/.config/i3/config.d/picom.conf
 exec --no-startup-id nm-applet
 # exec --no-startup-id nm-tray
 
+# Portapapeles.
+exec --no-startup-id parcellite
+
 # Notificaciones.
 # Se ejecuta el servidor desde /usr/share/dbus-1/services/org.freedesktop.Notifications.service
 # [D-BUS Service]
