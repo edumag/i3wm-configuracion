@@ -251,7 +251,8 @@ bindsym $mod+m exec --no-startup-id ~/.config/i3/launch_custom_scripts.sh
 exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/wallpaper.jpg
 
 # Transparencias.
-exec --no-startup-id picom --config .config/picom/picom.conf
+# https://ejmastnak.com/tutorials/arch/picom/
+exec --no-startup-id picom --config $HOME/.config/i3/config.d/picom.conf
 
 # Red
 exec --no-startup-id nm-applet
@@ -268,7 +269,7 @@ exec --no-startup-id nm-applet
 bindsym Ctrl+space exec dunstctl history-pop
 
 # Volumen.
-exec --no-startup-id pasystray -a -S /usr/share/icons/oxygen/base/22x22/status/audio-volume-high.png
+exec --no-startup-id pasystray -a -S /usr/share/icons/oxygen/base/16x16/status/audio-volume-high.png
 
 
 # my i3 config is at ~/.config/i3/config
@@ -285,9 +286,8 @@ exec --no-startup-id $HOME/.config/i3/autostart.sh
 # Decoración ventana.
 for_window [class="^.*"] border pixel 2
 
-# Monitor externo arriba.
-# exec xrandr --output LVDS-1  --mode 1366x768 --pos 110x900 --output VGA-1 --primary --mode 1600x900 --pos 0x0
-exec --no-startup-id $HOME/.config/i3/custom_scripts/1-Monitor
+# Monitores
+exec --no-startup-id $HOME/.config/i3/xrand.sh 2
 
 # Extras
 bindsym $mod+Ctrl+e exec "terminator -e ssh -t lesolivex 'cd emma ; ./scripts/emma'"
