@@ -6,11 +6,11 @@
 
 ### debian o derivadas.
 
-    sudo apt-get install i3 dunst compton terminator feh rofi system-config-printer gdebi-core network-manager-gnome xrand keychain pasystray ksip parcellite
+    sudo apt-get install i3 dunst compton terminator feh rofi system-config-printer gdebi-core network-manager-gnome xrand keychain pasystray ksip parcellite xfce4-power-manager
 
 ### arch o derivadas
 
-    sudo pacman -S i3 i3-gaps dunst terminator feh rofi xrand network-manager-applet keychain sysstat pasystray ksnip parcellite
+    sudo pacman -S i3 i3-gaps dunst terminator feh rofi xrand network-manager-applet keychain sysstat pasystray ksnip parcellite xfce4-power-manager
 
 ### Bajamos configuración.
 

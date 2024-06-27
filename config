@@ -242,7 +242,7 @@ bindsym $mod+Tab exec rofi -show window
 # Gestión de impresoras.
 bindsym $mod+p exec system-config-printer
 # Ruta de fichero copiada a vim-remote.
-bindsym Ctrl+Shift+q exec file2vim
+bindsym Ctrl+Shift+a exec $HOME/desarrollo/magscripts/desarrollo/vimremote
 
 # Menú scripts propios.
 bindsym $mod+m exec --no-startup-id ~/.config/i3/launch_custom_scripts.sh
@@ -275,6 +275,8 @@ bindsym Ctrl+space exec dunstctl history-pop
 # Volumen.
 exec --no-startup-id pasystray -a -S /usr/share/icons/oxygen/base/16x16/status/audio-volume-high.png
 
+# Batería.
+exec --no-startup-id xfce4-power-manager
 
 # my i3 config is at ~/.config/i3/config
 # increase screen brightness with notification
