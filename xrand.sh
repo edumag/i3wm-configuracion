@@ -9,6 +9,11 @@ if [ "$1" == "2" ] ; then
       --output HDMI-A-0 --mode 1920x1080 --pos 0x0 --rotate normal \
       --output eDP --primary --mode 1440x900 --pos 1920x334 --rotate normal
 
+elif [ "$1" == "3" ] ; then
+
+  xrandr --output eDP --off \
+      --output HDMI-A-0  --primary --mode 1920x1080 --pos 0x0 --rotate normal
+
 
 else
   # Un monitor.

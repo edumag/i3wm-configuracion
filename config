@@ -170,9 +170,12 @@ client.urgent           $urgent_bg   $urgent_bg   $text-color #00ff00
 
 # bar
 bar {
+    id 1
+    # output primary
     font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont 11
     position top
     tray_padding 4
+    tray_output primary
     status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
     colors {
         background $bg_color_bar
@@ -183,7 +186,22 @@ bar {
             urgent_workspace   $urgent_bg   $urgent_bg   $text-color
     }
 }
-
+# bar {
+#     id 2
+#     output nonprimary
+#     font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont 11
+#     position top
+#     tray_padding 4
+#     status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
+#     colors {
+#         background $bg_color_bar
+#             separator #757575
+#         #                      border       background   text
+#             focused_workspace  $bg_color    $bg_color    $text-color
+#             inactive_workspace $inactive_bg $inactive_bg $inactive-text-color
+#             urgent_workspace   $urgent_bg   $urgent_bg   $text-color
+#     }
+# }
 
 # sticky window
 bindsym $mod+Shift+s sticky toggle
