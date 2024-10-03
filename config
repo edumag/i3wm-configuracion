@@ -1,6 +1,7 @@
 # mod
 set $mod Mod4
 set $browser brave
+set $i3exit $HOME/.config/i3/scripts/i3exit.sh
 
 # font
 # font pango: System San Francisco Display 10
@@ -131,7 +132,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # exit i3
-bindsym $mod+Shift+e exec $HOME/.config/i3/i3exit.sh logout
+bindsym $mod+Shift+e exec $i3exit logout
 
 
 # resize window (you can also use the mouse for that)
@@ -341,16 +342,16 @@ gaps outer 1
 # border_radius 12
 
 # Menú de salida.
-set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown, (b)lurlock
+set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3exit lock, mode "default"
-    bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
-    bindsym s exec --no-startup-id i3exit suspend, mode "default"
-    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-    bindsym r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
-    bindsym b exec --no-startup-id blurlock, mode "default"
+    bindsym l exec --no-startup-id $i3exit lock, mode "default"
+    bindsym e exec --no-startup-id $i3exit logout, mode "default"
+    bindsym u exec --no-startup-id $i3exit switch_user, mode "default"
+    bindsym s exec --no-startup-id $i3exit suspend, mode "default"
+    bindsym h exec --no-startup-id $i3exit hibernate, mode "default"
+    bindsym r exec --no-startup-id $i3exit reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id $i3exit shutdown, mode "default"
+    # bindsym b exec --no-startup-id blurlock, mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
