@@ -233,6 +233,7 @@ for_window [class="Slack"] floating enable
 # key-bindings
 # Listar dispositivos de audio.
 # pactl list sinks |& grep -A 2 -E "Sink"
+# bindsym XF86AudioRaiseVolume exec --no-startup-id "~/.config/i3/volume_all.sh +"
 bindsym XF86AudioRaiseVolume exec --no-startup-id "~/.config/i3/volume_all.sh +"
 bindsym XF86AudioLowerVolume exec --no-startup-id "~/.config/i3/volume_all.sh -"
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
@@ -245,7 +246,6 @@ bindsym $mod+Return exec terminator
 # Matar aplicación.
 bindsym $mod+Shift+q kill
 
-# Añado spectacle para capturar pantalla por ser el que tengo instalado.
 # bindsym Print exec spectacle
 bindsym Print exec ksnip -a
 bindsym Shift+Print exec ksnip -sm
