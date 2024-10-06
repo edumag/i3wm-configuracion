@@ -1,4 +1,4 @@
 #!/bin/sh
 
-~/.config/i3/xrand.sh 1
+~/.config/i3/scripts/xrand.sh 1
 

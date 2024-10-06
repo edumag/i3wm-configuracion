@@ -110,6 +110,18 @@ Configuramos tecla de brillo + shift para segunda pantalla.
 vim .config/mimeapps.list
 ```
 
+## Acceso a los scripts desde consola.
+
+Añadimos el path de los scripts de i3 para tener acceso desde consola.
+
+En ~/.bashrc añadir:
+
+```
+PATH="$PATH:$HOME/.config/i3/scripts/"
+PATH="$PATH:$HOME/.config/i3/custom_scripts/"
+export PATH
+```
+
 ## Referencias
 
 - [Una buena explicación de como funciona](https://github.com/bookercodes/dotfiles.git)
