@@ -24,10 +24,10 @@ fi
 eval $status_cmd 2>&1 >/dev/null
 if [ $? -gt 0 ]; then
     eval $off_cmd 2>&1 >/dev/null
-    notify-send -t 3000  "$label Notificaciones activadas"
+    notify-send -t 1000  "$label Notificaciones activadas"
     echo "$label Notificaciones activadas"
 else
-    notify-send -t 3000 "$label Notificaciones desactivadas"
+    notify-send -t 1000 "$label Notificaciones desactivadas"
     sleep 3s
     eval $on_cmd 2>&1 >/dev/null
     echo  "$label Notificaciones desactivadas"
