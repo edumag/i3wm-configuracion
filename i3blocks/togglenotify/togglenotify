@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# message="$message <span foreground=\"$color\">$squares</span>"
+
+~/.config/i3/custom_scripts/NotificationsToggle status

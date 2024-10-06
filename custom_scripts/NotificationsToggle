@@ -1,0 +1,32 @@
+#!/bin/bash
+
+
+label=
+icon_on="[Ok]\n[Ok]\n#00ff00"
+icon_off="[Ko]\n[Ko]\n#ff0000"
+
+on_cmd="dunstctl set-paused true"
+off_cmd="dunstctl set-paused false"
+status_cmd="dunstctl is-paused | grep 'false'"
+
+if [ $1 = "status" ]; then
+    eval $status_cmd 2>&1 >/dev/null
+    if [ $? -gt 0 ]; then
+        echo -e "$icon_off"
+    else
+        echo -e "$icon_on"
+    fi
+    exit
+fi
+
+eval $status_cmd 2>&1 >/dev/null
+if [ $? -gt 0 ]; then
+    eval $off_cmd 2>&1 >/dev/null
+    notify-send -t 3000  "$label Notificaciones activadas"
+    echo "$label Notificaciones activadas"
+else
+    notify-send -t 3000 "$label Notificaciones desactivadas"
+    sleep 3s
+    eval $on_cmd 2>&1 >/dev/null
+    echo  "$label Notificaciones desactivadas"
+fi
