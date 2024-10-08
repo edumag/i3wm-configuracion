@@ -7,18 +7,25 @@ erexit() {
 
 [[ " $@ " =~ " force " ]] && rm /tmp/.bingwp.*
 
-offset=0
+offset=$(( RANDOM % 8 ))
 # Generamos offset aleatorio si no nos llega.
-[[ "$1" =~ [1-9][0-9]*$ ]] && offset=$1 || offset=${RANDOM:0:1}
+[[ "$1" =~ [1-9][0-9]*$ ]] && offset=$1
 
+# Locale rrandom.
+markets=( es-Es ca-Es zh-CN en-US ja-JP en-AU en-UK de-DE en-NZ en-CA )
+e=${markets[RANDOM%${#markets[@]}]}
+
+echo "market: $e"
 echo "offset: $offset"
 
-market=${LANG:-en-US}
-market=${market%.*}
-market=${market/_/-}
+market=${e}
+# market=${e:-en-US}
+# market=${market%.*}
+# market=${market/_/-}
 url="https://www.bing.com/HPImageArchive.aspx?idx=${offset}&n=1&mkt=${market}"
+# url="https://picsum.photos/3840/2160/?random"
 echo "url: $url"
-read data < <(curl -s "https://www.bing.com/HPImageArchive.aspx?idx=${offset}&n=1&mkt=${market}")
+read data < <(curl -s "$url")
 
 # extract image url
 image=${data#*\<url\>}
