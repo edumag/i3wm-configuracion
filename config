@@ -185,8 +185,8 @@ bar {
         background $bg_color_bar
             separator #757575
         #                      border       background   text
-            focused_workspace  $bg_color    $bg_color    $text-color
-            inactive_workspace $inactive_bg $inactive_bg $inactive-text-color
+            inactive_workspace $bg_color    $bg_color    $text-color
+            focused_workspace  $inactive_bg $inactive_bg $inactive-text-color
             urgent_workspace   $urgent_bg   $urgent_bg   $text-color
     }
 }
@@ -270,7 +270,7 @@ bindsym Ctrl+Shift+a exec $HOME/desarrollo/magscripts/desarrollo/vimremote
 bindsym $mod+m exec --no-startup-id ~/.config/i3/scripts/launch_custom_scripts.sh
 
 # wallpaper.
-# exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/wallpaper.jpg
+exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/wallpaper.jpg
 exec_always --no-startup-id ~/.config/i3/scripts/wallpaper.sh
 
 # Transparencias.
