@@ -2,10 +2,9 @@
 
 
 label=
-# icon_on="[Ok]\n[Ok]\n#00ff00"
-# icon_off="[Ko]\n[Ko]\n#ff0000"
-icon_on=".\n.\n#00ff00"
-icon_off=".\n.\n#ff0000"
+label=.
+icon_on="${label}\n${label}\n#00ff00"
+icon_off="${label}\n${label}\n#ff0000"
 
 on_cmd="dunstctl set-paused true"
 off_cmd="dunstctl set-paused false"

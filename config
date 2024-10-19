@@ -270,8 +270,8 @@ bindsym Ctrl+Shift+a exec $HOME/desarrollo/magscripts/desarrollo/vimremote
 bindsym $mod+m exec --no-startup-id ~/.config/i3/scripts/launch_custom_scripts.sh
 
 # wallpaper.
-exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/wallpaper.jpg
-exec_always --no-startup-id ~/.config/i3/scripts/wallpaper.sh
+# exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/wallpaper.jpg
+exec_always --no-startup-id sleep 3 && ~/.config/i3/scripts/wallpaper.sh
 
 # Transparencias.
 # https://ejmastnak.com/tutorials/arch/picom/

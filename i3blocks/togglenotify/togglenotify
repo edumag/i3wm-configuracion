@@ -2,4 +2,9 @@
 
 # message="$message <span foreground=\"$color\">$squares</span>"
 
+if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
+  /usr/bin/firefox --new-tab "${rss_link}"
+fi
 ~/.config/i3/custom_scripts/NotificationsToggle status
+
+
