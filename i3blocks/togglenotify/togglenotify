@@ -1,10 +1,37 @@
 #!/usr/bin/env bash
 
-# message="$message <span foreground=\"$color\">$squares</span>"
+icon=
+label=$icon
+icon_on="${label}\n${label}\n#5da844"
+icon_off="${label}\n${label}\n#bbbfba"
+on_cmd="dunstctl set-paused true"
+off_cmd="dunstctl set-paused false"
+status_cmd="dunstctl is-paused | grep 'false'"
 
-if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
-  /usr/bin/firefox --new-tab "${rss_link}"
+if [[ "${BLOCK_BUTTON}" -eq 1 ]] || [[ "${1}" -eq "toggle" ]]; then
+    # ~/.config/i3/custom_scripts/NotificationsToggle status
+
+    eval $status_cmd 2>&1 >/dev/null
+
+    if [[ $? -eq 0 ]]; then
+        # Notificaciones desactivadas.
+        notify-send -t 1000 "$icon Notificaciones desactivadas"
+        sleep 3s
+        eval $on_cmd 2>&1 >/dev/null
+    else
+        # Notificaciones activadas.
+        eval $off_cmd 2>&1 >/dev/null
+        notify-send -t 1000  "$icon  Notificaciones activadas"
+    fi
 fi
-~/.config/i3/custom_scripts/NotificationsToggle status
 
+eval $status_cmd 2>&1 >/dev/null
+if [[ $? -eq 0 ]]; then
+    # Notificaciones desactivadas
+    echo -e "$icon_off"
+else
+    # Notificaciones activadas
+    echo -e "$icon_on"
+fi
+exit 0
 

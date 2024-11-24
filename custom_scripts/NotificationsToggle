@@ -1,8 +1,9 @@
 #!/bin/bash
 
 
-label=
+icon=
 label=.
+label=$icon
 icon_on="${label}\n${label}\n#00ff00"
 icon_off="${label}\n${label}\n#ff0000"
 
@@ -23,10 +24,10 @@ fi
 eval $status_cmd 2>&1 >/dev/null
 if [ $? -gt 0 ]; then
     eval $off_cmd 2>&1 >/dev/null
-    notify-send -t 1000  "$label Notificaciones activadas"
+    notify-send -t 1000  "$icon  Notificaciones activadas"
     echo "$label Notificaciones activadas"
 else
-    notify-send -t 1000 "$label Notificaciones desactivadas"
+    notify-send -t 1000 "$icon Notificaciones desactivadas"
     sleep 3s
     eval $on_cmd 2>&1 >/dev/null
     echo  "$label Notificaciones desactivadas"
