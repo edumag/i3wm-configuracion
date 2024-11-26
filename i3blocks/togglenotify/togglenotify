@@ -2,14 +2,13 @@
 
 icon=
 label=$icon
-icon_on="${label}\n${label}\n#5da844"
-icon_off="${label}\n${label}\n#bbbfba"
+icon_on="${label}\n${label}\n#bbbfba"
+icon_off="${label}\n${label}\n#312121"
 on_cmd="dunstctl set-paused true"
 off_cmd="dunstctl set-paused false"
 status_cmd="dunstctl is-paused | grep 'false'"
 
-if [[ "${BLOCK_BUTTON}" -eq 1 ]] || [[ "${1}" -eq "toggle" ]]; then
-    # ~/.config/i3/custom_scripts/NotificationsToggle status
+if [[ "${BLOCK_BUTTON}" -eq 1 ]] || [[ $1 == "toggle" ]]; then
 
     eval $status_cmd 2>&1 >/dev/null
 
