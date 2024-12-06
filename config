@@ -149,20 +149,24 @@ mode "resize" {
 # resize mode
 bindsym $mod+r mode "resize"
 
-set $active_bg   #eeeeee
-set $active      #000000
-set $bg_color 	 #2f343f
-set $inactive_bg #000000
-set $text-color  #ffffff
-set $inactive    #ffffff
-set $urgent_bg   #E53935
-set $bg_color_bar 	 #2f343f
+# colors
+set $text-color    #ffffff
+## Active
+set $active        #2f343f
+set $active_bg     #928883
+## Inactive
+set $inactive_bg   #2f343f
+set $inactive      #ffffff
+## Urgent
+set $urgent_bg     #f85c0f
+## Bar
+set $bg_color_bar  #2f343f
 
-#                       border       background   text        indicator
-client.focused          $active_bg   $active_bg   $active     $active
-client.unfocused        $inactive_bg $inactive_bg $inactive   $inactive
-client.focused_inactive $inactive_bg $inactive_bg $inactive   #00ff00
-client.urgent           $urgent_bg   $urgent_bg   $text-color #00ff00
+#                       border        background    text         indicator
+client.focused          $active_bg    $active_bg    $active      $active
+client.unfocused        $inactive_bg  $inactive_bg  $inactive    $inactive
+client.focused_inactive $inactive_bg  $inactive_bg  $inactive    $urgent_bg
+client.urgent           $urgent_bg    $urgent_bg    $text-color  $urgent_bg
 
 # bar
 bar {
@@ -174,13 +178,14 @@ bar {
     tray_output primary
     status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
     workspace_min_width 20
+    padding 0
     colors {
         background $bg_color_bar
             separator #757575
-            #                  border       background   text
-            inactive_workspace $bg_color    $bg_color    $text-color
-            focused_workspace  $inactive_bg $inactive_bg $inactive-text-color
-            urgent_workspace   $urgent_bg   $urgent_bg   $text-color
+            #                  border        background    text
+            inactive_workspace $inactive_bg  $inactive_bg  $text-color
+            focused_workspace  $active_bg    $active_bg    $text-color
+            urgent_workspace   $urgent_bg    $urgent_bg    $text-color
     }
 }
 bar {
@@ -199,10 +204,10 @@ bar {
     colors {
         background $bg_color_bar
             separator #757575
-            #                  border       background   text
-            inactive_workspace $bg_color    $bg_color    $text-color
-            focused_workspace  $inactive_bg $inactive_bg $inactive-text-color
-            urgent_workspace   $urgent_bg   $urgent_bg   $text-color
+            #                  border        background    text
+            inactive_workspace $inactive_bg  $inactive_bg  $text-color
+            focused_workspace  $active_bg    $active_bg    $text-color
+            urgent_workspace   $urgent_bg    $urgent_bg    $text-color
     }
 }
 
