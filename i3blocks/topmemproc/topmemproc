@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+MEM_USED=$(free | grep Mem | awk '{print $3/$2 * 100.0}' | cut -d. -f1)
+PROCESS=$(ps -c -o cmd --sort=-%mem | head -2 | tail -1)
+echo "$PROCESS"
+echo "$PROCESS"
+if (( $MEM_USED > 90 )); then
+echo '#FF0000'
+elif (( $MEM_USED > 80 )); then
+echo '#FFAE00'
+fi

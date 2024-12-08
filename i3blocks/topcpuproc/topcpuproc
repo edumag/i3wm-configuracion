@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+CPU_USED=$(ps -c -o %cpu --sort=-%cpu | head -2 | tail -1 | tr -d ' ' | cut -d. -f1)
+PROCESS=$(ps -c -o cmd --sort=-%cpu | head -2 | tail -1)
+echo "${CPU_USED}% $PROCESS"
+echo "${CPU_USED}% $PROCESS"
+if (( $CPU_USED > 90 )); then
+    echo '#FF0000'
+elif (( $CPU_USED > 80 )); then
+    echo '#FFAE00'
+fi
