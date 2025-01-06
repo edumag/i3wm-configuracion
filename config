@@ -78,6 +78,12 @@ bindsym $mod+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+shift+space focus mode_toggle
 
+# focus the child container
+# version 4.24
+# popup_during_fullscreen all
+# version < 4.24
+popup_during_fullscreen leave_fullscreen
+
 # focus the parent container
 bindsym $mod+a focus parent
 
@@ -274,8 +280,9 @@ bindsym Ctrl+Shift+a exec $HOME/desarrollo/magscripts/desarrollo/vimremote
 bindsym $mod+m exec --no-startup-id ~/.config/i3/scripts/launch_custom_scripts.sh
 
 # wallpaper.
-# exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/wallpaper.jpg
-exec_always --no-startup-id sleep 5 && ~/.config/i3/scripts/wallpaper.sh
+exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/wallpaper.jpg
+# Vamos a buscar uno diferente cada vez.
+# exec_always --no-startup-id sleep 5 && ~/.config/i3/scripts/wallpaper.sh
 
 # Transparencias.
 # https://ejmastnak.com/tutorials/arch/picom/
