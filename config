@@ -333,6 +333,7 @@ exec --no-startup-id $HOME/.config/i3/scripts/xrand.sh 2
 # bindsym $mod+Ctrl+w exec "terminator -e ssh -t lesolivex 'cd emma-simula ; ./scripts/emma simula'"
 bindsym $mod+Ctrl+b exec $browser --new-window https://google.com
 # xdg-open http://google.com
+bindsym $mod+Ctrl+j exec "terminator -e ~/desarrollo/magscripts/desarrollo/text2json"
 
 # i3gaps
 # You can also use any non-zero value if you'd like to have a border
