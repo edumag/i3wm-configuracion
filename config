@@ -227,6 +227,7 @@ for_window [class="Pavucontrol"] floating enable
 for_window [class="Skype"] floating enable
 for_window [class="System-config-printer.py"] floating enable
 for_window [class="Slack"] floating enable
+for_window [class="gnome-calculator"] floating enable
 
 # default workspaces
 # assign [class="Spotify"] $workspace5
