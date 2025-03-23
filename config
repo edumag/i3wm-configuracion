@@ -205,7 +205,7 @@ bar {
     workspace_min_width 20
     font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont 11
     position top
-    tray_output none
+    tray_output nonprimary
     status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
     colors {
         background $bg_color_bar
