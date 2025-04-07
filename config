@@ -1,6 +1,6 @@
 # mod
 set $mod Mod4
-set $browser brave
+set $browser flatpak run app.zen_browser.zen
 set $i3exit $HOME/.config/i3/scripts/i3exit.sh
 
 # font
