@@ -11,8 +11,7 @@ if [ $1 = "2" ] ; then
 elif [ $1 = "3" ] ; then
   echo "Apagamos pantalla portatil."
 
-  xrandr --output eDP --off \
-      --output HDMI-A-0  --primary --mode 1920x1080 --pos 0x0 --rotate normal
+  xrandr --output eDP --off
 
 elif [ $1 = "4" ] ; then
   echo "Monitor externo en hub."
