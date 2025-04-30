@@ -328,7 +328,7 @@ exec --no-startup-id $HOME/.config/i3/autostart.sh
 for_window [class="^.*"] border pixel 2
 
 # Monitores
-exec --no-startup-id $HOME/.config/i3/scripts/xrand.sh 2
+exec --no-startup-id $HOME/.config/i3/scripts/xrand.sh 4
 
 # Extras
 # bindsym $mod+Ctrl+e exec "terminator -e ssh -t lesolivex 'cd emma ; ./scripts/emma'"

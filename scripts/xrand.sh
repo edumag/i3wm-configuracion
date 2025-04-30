@@ -14,6 +14,17 @@ elif [ $1 = "3" ] ; then
   xrandr --output eDP --off \
       --output HDMI-A-0  --primary --mode 1920x1080 --pos 0x0 --rotate normal
 
+elif [ $1 = "4" ] ; then
+  echo "Monitor externo en hub."
+  xrandr \
+      --output eDP --primary --mode 1280x800 --pos 1920x206 --rotate normal \
+      --output HDMI-A-0 --off \
+      --output DisplayPort-0 --off \
+      --output DisplayPort-1 --mode 1920x1080 --pos 0x0 --rotate normal \
+      --output DisplayPort-2 --off \
+      --output DisplayPort-3 --off \
+      --output DisplayPort-4 --off \
+      --output DisplayPort-5 --off
 
 else
   echo "Un monitor."
