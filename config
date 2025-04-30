@@ -1,6 +1,7 @@
 # mod
 set $mod Mod4
 set $browser flatpak run app.zen_browser.zen
+# set $browser brave
 set $i3exit $HOME/.config/i3/scripts/i3exit.sh
 
 # font
@@ -267,7 +268,7 @@ bindsym Shift+Print exec ksnip -sm
 # bindsym $mod+d exec rofi -show drun -lines 3 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -bc "$bg_color" -bg "$bg_color" -fg "$text-color" -hlbg "$bg_color" -hlfg "#9575cd" -font "System San Francisco Display 18"
 
 # Menú de aplicaciones.
-bindsym $mod+d exec rofi -show drun
+bindsym $mod+d exec rofi -show-icons -show drun
 # Calculadora con rofi.
 bindsym $mod+c exec rofi -show calc -modi "calc:qalc +u8 -nocurrencies"
 # Utilizamos rofi para que nos muestre toda las ventanas abiertas.
@@ -332,7 +333,7 @@ exec --no-startup-id $HOME/.config/i3/scripts/xrand.sh 2
 # Extras
 # bindsym $mod+Ctrl+e exec "terminator -e ssh -t lesolivex 'cd emma ; ./scripts/emma'"
 # bindsym $mod+Ctrl+w exec "terminator -e ssh -t lesolivex 'cd emma-simula ; ./scripts/emma simula'"
-bindsym $mod+Ctrl+b exec $browser --new-window https://google.com
+bindsym $mod+Ctrl+b exec $browser
 # xdg-open http://google.com
 bindsym $mod+Ctrl+j exec "terminator -e ~/desarrollo/magscripts/desarrollo/text2json"
 
