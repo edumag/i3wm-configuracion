@@ -104,6 +104,17 @@ Utilizamos script propio para el control de brillo con xrand.
 
 Configuramos tecla de brillo + shift para segunda pantalla.
 
+Aparte de los botones de brillo del portátil, añado el lanzador GUI de xcalib.
+
+```
+pipx install git+https://github.com/Ablinne/kolorcontrol.git
+```
+
+Podrás lanzarlo desde el menu de custom_scripts, <MOD>+m
+
+![kolorcontrol](./img/kocolorcontrol.png)
+
+
 ## Aplicaciones por defecto.
 
 ```
