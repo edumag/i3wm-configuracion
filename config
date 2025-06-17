@@ -1,7 +1,7 @@
 # mod
 set $mod Mod4
-set $browser /home/edumag/opt/zen/zen --new-window
-# set $browser brave
+# set $browser /home/edumag/opt/zen/zen --new-window
+set $browser brave --new-window
 set $i3exit $HOME/.config/i3/scripts/i3exit.sh
 
 # font
@@ -290,7 +290,12 @@ exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/wallpaper.jpg
 
 # Transparencias.
 # https://ejmastnak.com/tutorials/arch/picom/
+# Cancelamos picon: ERROR Xlib: ignoring invalid extension event 146
 exec --no-startup-id picom --config $HOME/.config/i3/config.d/picom.conf
+
+# New floating windows with title bar and without borders
+default_floating_border none
+hide_edge_borders none
 
 # Red
 exec --no-startup-id nm-applet
@@ -330,7 +335,7 @@ exec --no-startup-id $HOME/.config/i3/autostart.sh
 for_window [class="^.*"] border pixel 2
 
 # Monitores
-exec --no-startup-id $HOME/.config/i3/scripts/xrand.sh 4
+exec --no-startup-id $HOME/.config/i3/scripts/xrand.sh 2
 
 # Extras
 # bindsym $mod+Ctrl+e exec "terminator -e ssh -t lesolivex 'cd emma ; ./scripts/emma'"
@@ -350,7 +355,7 @@ smart_gaps on
 smart_gaps inverse_outer
 
 ##### i3-gaps ##############
-for_window [class=".*"] border pixel 1 #*
+for_window [class=".*"] border pixel 1
 gaps inner 4
 gaps outer 1
 #gaps horizontal 2
