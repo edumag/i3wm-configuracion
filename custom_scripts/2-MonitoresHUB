@@ -1,3 +1,0 @@
-#!/bin/sh
-
-~/.config/i3/scripts/xrand.sh 4
