@@ -328,14 +328,8 @@ bindsym Shift+XF86MonBrightnessUp exec $HOME/.config/i3/scripts/brightness.sh + 
 bindsym XF86MonBrightnessDown exec $HOME/.config/i3/scripts/brightness.sh - 1
 bindsym Shift+XF86MonBrightnessDown exec $HOME/.config/i3/scripts/brightness.sh - 2
 
-# Autostart.
-exec --no-startup-id $HOME/.config/i3/autostart.sh
-
 # Decoración ventana.
 for_window [class="^.*"] border pixel 2
-
-# Monitores
-exec --no-startup-id $HOME/.config/i3/scripts/xrand.sh 2
 
 # Extras
 # bindsym $mod+Ctrl+e exec "terminator -e ssh -t lesolivex 'cd emma ; ./scripts/emma'"
@@ -381,4 +375,11 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 bindsym $mod+Escape mode "$mode_system"
+
+# Autostart.
+exec --no-startup-id $HOME/.config/i3/autostart.sh
+
+# Monitores
+exec --no-startup-id $HOME/.config/i3/scripts/xrand.sh
+exec --no-startup-id $HOME/.config/i3/scripts/xrand.sh 2
 
