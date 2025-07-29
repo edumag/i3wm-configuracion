@@ -380,6 +380,6 @@ bindsym $mod+Escape mode "$mode_system"
 exec --no-startup-id $HOME/.config/i3/autostart.sh
 
 # Monitores
+exec --no-startup-id $HOME/.config/i3/scripts/xrand.sh 2 || \
 exec --no-startup-id $HOME/.config/i3/scripts/xrand.sh
-exec --no-startup-id $HOME/.config/i3/scripts/xrand.sh 2
 
