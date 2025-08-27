@@ -288,6 +288,9 @@ exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/wallpaper.jpg
 # Vamos a buscar uno diferente cada vez.
 # exec_always --no-startup-id sleep 5 && ~/.config/i3/scripts/wallpaper.sh
 
+# Conky
+exec_always --no-startup-id ~/.config/i3/scripts/conky_start.sh
+
 # Transparencias.
 # https://ejmastnak.com/tutorials/arch/picom/
 # Cancelamos picon: ERROR Xlib: ignoring invalid extension event 146
