@@ -267,8 +267,6 @@ bindsym $mod+Shift+q kill
 bindsym Print exec ksnip -a
 bindsym Shift+Print exec ksnip -sm
 
-# bindsym $mod+d exec rofi -show drun -lines 3 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -bc "$bg_color" -bg "$bg_color" -fg "$text-color" -hlbg "$bg_color" -hlfg "#9575cd" -font "System San Francisco Display 18"
-
 # Menú de aplicaciones.
 bindsym $mod+d exec rofi -show-icons -show drun
 # Calculadora con rofi.
